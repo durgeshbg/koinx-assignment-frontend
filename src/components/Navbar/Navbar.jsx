@@ -10,7 +10,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className='flex items-center px-5 py-3 md:px-10 shadow-lg'>
+    <div className='flex items-center px-5 py-3 md:px-10'>
       <span className='cursor-pointer mr-auto'>
         <LogoSVG />
       </span>
