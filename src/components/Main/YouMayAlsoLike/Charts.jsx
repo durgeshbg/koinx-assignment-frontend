@@ -1,8 +1,11 @@
 import { useRef } from 'react';
 import Chart from './Chart';
+import { useRecoilValue } from 'recoil';
+import { trendingCoinsAtom } from '../../../Atoms';
 
 const Charts = () => {
   const scrollContainerRef = useRef(null);
+  const data = useRecoilValue(trendingCoinsAtom);
 
   const scrollLeft = () => {
     if (scrollContainerRef.current) {
@@ -22,6 +25,8 @@ const Charts = () => {
     }
   };
 
+  console.log(data.coins[0]);
+
   return (
     <div className='relative my-3 mb-4'>
       <button
@@ -35,18 +40,17 @@ const Charts = () => {
       </button>
 
       <div ref={scrollContainerRef} className='overflow-x-scroll w-full flex gap-3 pl-8 pr-4'>
-        <Chart />
-        <Chart />
-        <Chart />
-        <Chart />
-        <Chart />
-        <Chart />
-        <Chart />
-        <Chart />
-        <Chart />
-        <Chart />
-        <Chart />
-        <Chart />
+        {data &&
+          data.coins.map((coin) => (
+            <Chart
+              key={coin.item.coin_id}
+              symbol={coin.item.symbol}
+              sparkline={coin.item.data.sparkline}
+              path={coin.item.small}
+              change={coin.item.data.price_change_percentage_24h.usd.toFixed(2)}
+              price={coin.item.data.market_cap}
+            />
+          ))}
       </div>
 
       <button
