@@ -5,11 +5,13 @@ import CurrentCoin from './CurrentCoin/CurrentCoin';
 import AboutBitCoin from './AboutBitCoin/AboutBitCoin';
 import Team from './Team/Team';
 import YouMayAlsoLike from './YouMayAlsoLike/YouMayAlsoLike';
+import GetStarted from './GetStarted/GetStarted';
+import TrendingCoins from './TrendingCoins/TrendingCoins';
 
 const Main = () => {
   return (
-    <>
-      <main className='bg-slate-100 flex flex-col px-5'>
+    <div className='bg-slate-100'>
+      <div className='flex flex-col'>
         <BreadCrumbs items={['Cryptocurrencies', 'Bitcoin']} activeIndex={1} />
         <CurrentCoin />
         <Analytics />
@@ -17,8 +19,12 @@ const Main = () => {
         <AboutBitCoin />
         <Team />
         <YouMayAlsoLike />
-      </main>
-    </>
+      </div>
+      <div className='flex flex-col'>
+        <GetStarted />
+        <TrendingCoins />
+      </div>
+    </div>
   );
 };
 

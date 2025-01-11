@@ -4,7 +4,7 @@ import CurrentMarketValue from './CurrentMarketValue';
 
 const CurrentCoin = () => {
   return (
-    <div className='h-full  mt-5 w-full'>
+    <div className='h-full mt-5 mx-5'>
       <div className='flex justify-between w-64 gap-5'>
         <div className='flex items-center justify-between w-3/4'>
           <BitcoinSVG />
