@@ -1,4 +1,5 @@
 import BitcoinSVG from '../../../assets/BitcoinSVG';
+import TradingViewWidget from './TradingViewWidget';
 import CurrentMarketValue from './CurrentMarketValue';
 
 const CurrentCoin = () => {
@@ -16,6 +17,7 @@ const CurrentCoin = () => {
       </div>
       <div className='flex flex-col bg-white rounded-md mx-auto p-7 w-full mt-5'>
         <CurrentMarketValue />
+        <TradingViewWidget />
       </div>
     </div>
   );
