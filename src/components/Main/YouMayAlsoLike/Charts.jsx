@@ -25,8 +25,6 @@ const Charts = () => {
     }
   };
 
-  console.log(data.coins[0]);
-
   return (
     <div className='relative my-3 mb-4'>
       <button
