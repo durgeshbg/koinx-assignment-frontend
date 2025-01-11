@@ -1,4 +1,5 @@
 import Analytics from './Analytics/Analytics';
+import Sentiment from './Sentiment/Sentiment';
 import BreadCrumbs from './CurrentCoin/BreadCrumbs';
 import CurrentCoin from './CurrentCoin/CurrentCoin';
 
@@ -9,6 +10,7 @@ const Main = () => {
         <BreadCrumbs items={['Cryptocurrencies', 'Bitcoin']} activeIndex={1} />
         <CurrentCoin />
         <Analytics />
+        <Sentiment />
       </main>
     </>
   );
