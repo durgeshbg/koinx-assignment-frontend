@@ -4,6 +4,7 @@ import BreadCrumbs from './CurrentCoin/BreadCrumbs';
 import CurrentCoin from './CurrentCoin/CurrentCoin';
 import AboutBitCoin from './AboutBitCoin/AboutBitCoin';
 import Team from './Team/Team';
+import YouMayAlsoLike from './YouMayAlsoLike/YouMayAlsoLike';
 
 const Main = () => {
   return (
@@ -15,6 +16,7 @@ const Main = () => {
         <Sentiment />
         <AboutBitCoin />
         <Team />
+        <YouMayAlsoLike />
       </main>
     </>
   );
