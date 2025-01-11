@@ -3,6 +3,7 @@ import TradingViewWidget from './TradingViewWidget';
 import CurrentMarketValue from './CurrentMarketValue';
 
 const CurrentCoin = () => {
+
   return (
     <div className='h-full mt-5 mx-5 lg:bg-white lg:rounded-t-md '>
       <div className='flex justify-between w-64 gap-5 lg:px-3 lg:pt-4'>
