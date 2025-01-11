@@ -25,3 +25,28 @@ export const bitcoinDataAtom = atom({
     },
   }),
 });
+
+export const trendingCoinsAtom = atom({
+  key: 'trendingCoins',
+  default: selector({
+    key: 'trendingCoinsSelector',
+    get: async () => {
+      try {
+        const url = 'https://api.coingecko.com/api/v3/search/trending';
+        const options = {
+          method: 'GET',
+          headers: {
+            accept: 'application/json',
+            'x-cg-demo-api-key': 'CG-1Nb8bc2Hjg6iTvAiR69v8X57',
+          },
+        };
+
+        const res = await fetch(url, options);
+        const data = res.json();
+        return data;
+      } catch (e) {
+        console.error(e);
+      }
+    },
+  }),
+});

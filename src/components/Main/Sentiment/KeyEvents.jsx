@@ -1,61 +1,80 @@
+import { useRef } from 'react';
 import InfoSVG from '../../../assets/InfoSVG';
 import NotesSVG from '../../../assets/NotesSVG';
 import AnalyticsSVG from '../../../assets/AnalyticsSVG';
+import KeyEvent from './KeyEvent';
 
 const KeyEvents = () => {
+  const scrollContainerRef = useRef(null);
+
+  const scrollLeft = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({
+        left: -300,
+        behavior: 'smooth',
+      });
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({
+        left: 300,
+        behavior: 'smooth',
+      });
+    }
+  };
+
   return (
-    <>
-      <h2 className='flex items-center text-xl font-semibold text-gray-700 mt-4'>
+    <div className='relative mt-4'>
+      <h2 className='flex items-center text-xl font-semibold text-gray-700'>
         Key Events <InfoSVG />
       </h2>
-      <div className='overflow-x-scroll mt-3 w-auto flex gap-2'>
-        <div className='bg-blue-50 p-4 rounded-md flex gap-2 min-w-[345px]'>
-          <div className='pt-2'>
-            <NotesSVG />
-          </div>
-          <div>
-            <p className='font-semibold leading-tight text-sm pb-2'>
-              Lorem ipsum dolor sit amet consectetur. Dui vel quis dignissim mattis enim{' '}
-            </p>
-            <p className='text-xs text-gray-600'>
-              Lorem ipsum dolor sit amet consectetur. Ac phasellus risus est faucibus metus quis.
-              Amet sapien quam viverra adipiscing condimentum. Ac consectetur et pretium in a
-              bibendum in. Sed vitae sit nisi viverra natoque lacinia libero enim.
-            </p>
-          </div>
-        </div>
-        <div className='bg-green-50 p-4 rounded-md flex gap-2 min-w-[345px]'>
-          <div className='pt-2'>
-            <AnalyticsSVG />
-          </div>
-          <div>
-            <p className='font-semibold leading-tight text-sm pb-2'>
-              Lorem ipsum dolor sit amet consectetur. Dui vel quis dignissim mattis enim{' '}
-            </p>
-            <p className='text-xs text-gray-600'>
-              Lorem ipsum dolor sit amet consectetur. Ac phasellus risus est faucibus metus quis.
-              Amet sapien quam viverra adipiscing condimentum. Ac consectetur et pretium in a
-              bibendum in. Sed vitae sit nisi viverra natoque lacinia libero enim.
-            </p>
-          </div>
-        </div>
-        <div className='bg-blue-50 p-4 rounded-md flex gap-2 min-w-[345px]'>
-          <div className='pt-2'>
-            <NotesSVG />
-          </div>
-          <div>
-            <p className='font-semibold leading-tight text-sm pb-2'>
-              Lorem ipsum dolor sit amet consectetur. Dui vel quis dignissim mattis enim{' '}
-            </p>
-            <p className='text-xs text-gray-600'>
-              Lorem ipsum dolor sit amet consectetur. Ac phasellus risus est faucibus metus quis.
-              Amet sapien quam viverra adipiscing condimentum. Ac consectetur et pretium in a
-              bibendum in. Sed vitae sit nisi viverra natoque lacinia libero enim.
-            </p>
-          </div>
-        </div>
+
+      <button
+        onClick={scrollLeft}
+        className='absolute top-1/2 -left-4 transform -translate-y-1/2 p-3 bg-white shadow-lg rounded-full flex items-center justify-center z-10'
+        style={{
+          boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.06)',
+        }}
+      >
+        <span className='text-black text-xl'>&larr;</span>
+      </button>
+
+      <div ref={scrollContainerRef} className='overflow-x-scroll mt-3 w-full flex gap-3'>
+        <KeyEvent
+          SVG={<NotesSVG />}
+          title={'Lorem ipsum dolor sit amet consectetur. Dui vel quis dignissim mattis enim'}
+          body={
+            'Lorem ipsum dolor sit amet consectetur. Ac phasellus risus est faucibus metus quis. Amet sapien quam viverra adipiscing condimentum. Ac consectetur et pretium in abibendum in. Sed vitae sit nisi viverra natoque lacinia libero enim.'
+          }
+        />
+        <KeyEvent
+          SVG={<AnalyticsSVG />}
+          title={'Lorem ipsum dolor sit amet consectetur. Dui vel quis dignissim mattis enim'}
+          body={
+            'Lorem ipsum dolor sit amet consectetur. Ac phasellus risus est faucibus metus quis. Amet sapien quam viverra adipiscing condimentum. Ac consectetur et pretium in abibendum in. Sed vitae sit nisi viverra natoque lacinia libero enim.'
+          }
+        />
+        <KeyEvent
+          SVG={<NotesSVG />}
+          title={'Lorem ipsum dolor sit amet consectetur. Dui vel quis dignissim mattis enim'}
+          body={
+            'Lorem ipsum dolor sit amet consectetur. Ac phasellus risus est faucibus metus quis. Amet sapien quam viverra adipiscing condimentum. Ac consectetur et pretium in abibendum in. Sed vitae sit nisi viverra natoque lacinia libero enim.'
+          }
+        />
       </div>
-    </>
+
+      <button
+        onClick={scrollRight}
+        className='absolute top-1/2 -right-4 transform -translate-y-1/2 p-3 bg-white shadow-lg rounded-full flex items-center justify-center z-10'
+        style={{
+          boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.06)',
+        }}
+      >
+        <span className='text-black text-xl'>&rarr;</span>
+      </button>
+    </div>
   );
 };
 
