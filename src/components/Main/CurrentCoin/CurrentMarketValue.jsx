@@ -7,8 +7,8 @@ const CurrentMarketValue = () => {
   return (
     <div className='flex border-b gap-5 mb-6 pb-6'>
       <div className='money mr-auto'>
-        <div className='usd text-3xl font-semibold'>${data.bitcoin.usd}</div>
-        <div className='inr text-xl'>₹{data.bitcoin.inr}</div>
+        <div className='usd text-3xl font-semibold'>${data.bitcoin.usd.toLocaleString('en-US')}</div>
+        <div className='inr text-xl'>₹{data.bitcoin.inr.toLocaleString('en-IN')}</div>
       </div>
       <div
         className={`flex h-fit items-center px-2 py-1 rounded-md gap-2 ${
