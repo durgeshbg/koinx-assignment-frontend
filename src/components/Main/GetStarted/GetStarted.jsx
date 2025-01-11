@@ -2,7 +2,7 @@ import ArrowSVG from '../../../assets/ArrowSVG';
 
 const GetStarted = () => {
   return (
-    <div className='flex flex-col text-white bg-[#0052FE] rounded-md mx-5 p-7 mt-5 lg:w-3/12'>
+    <div className='flex flex-col text-white bg-[#0052FE] lg:mt-16 rounded-md mx-5 p-7 mt-5'>
       <img src='/getstarted.png' className='w-28 mx-auto' alt='' />
       <p className='font-semibold mx-auto mt-2'>Get Started with KoinX for FREE</p>
       <p className='text-center text-sm mt-6'>
