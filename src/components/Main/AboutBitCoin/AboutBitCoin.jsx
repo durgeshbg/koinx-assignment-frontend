@@ -39,25 +39,27 @@ const AboutBitCoin = () => {
       </div>
       <div>
         <h3 className='text-xl font-semibold mt-5'>Already Holding Crypto?</h3>
-        <div className='mt-3 bg-gradient-to-br from-green-400 to-blue-500 p-3 rounded-md flex gap-5'>
-          <img src='image2.png' className='w-32' alt='' />
-          <div className='flex flex-col justify-around'>
-            <h4 className='text-white font-semibold text-xl leading-8 w-3/4'>
-              Calculate your Profits
-            </h4>
-            <div className='bg-white max-w-max flex items-center rounded-md px-3 py-1'>
-              Check Now <ArrowSVG />
+        <div className='flex gap-3 flex-wrap' >
+          <div className='mt-3 bg-gradient-to-br from-green-400 to-blue-500 p-3 rounded-md flex gap-5'>
+            <img src='image2.png' className='w-32' alt='' />
+            <div className='flex flex-col justify-around'>
+              <h4 className='text-white font-semibold text-xl leading-8 w-[220px]'>
+                Calculate your Profits
+              </h4>
+              <div className='bg-white max-w-max flex items-center rounded-md px-3 py-1'>
+                Check Now <ArrowSVG />
+              </div>
             </div>
           </div>
-        </div>
-        <div className='mt-3 bg-gradient-to-br from-red-400 to-red-600 p-3 rounded-md flex gap-5'>
-          <img src='image1.png' className='w-32' alt='' />
-          <div className='flex flex-col justify-around'>
-            <h4 className='text-white font-semibold text-xl leading-8 w-3/4'>
-              Calculate your tax liability
-            </h4>
-            <div className='bg-white max-w-max flex items-center rounded-md px-3 py-1'>
-              Check Now <ArrowSVG />
+          <div className='mt-3 bg-gradient-to-br from-red-400 to-red-600 p-3 rounded-md flex gap-5'>
+            <img src='image1.png' className='w-32' alt='' />
+            <div className='flex flex-col justify-around'>
+              <h4 className='text-white font-semibold text-xl leading-8 w-[220px]'>
+                Calculate your tax liability
+              </h4>
+              <div className='bg-white max-w-max flex items-center rounded-md px-3 py-1'>
+                Check Now <ArrowSVG />
+              </div>
             </div>
           </div>
         </div>

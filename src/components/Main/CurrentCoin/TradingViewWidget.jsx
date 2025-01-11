@@ -56,9 +56,9 @@ function TradingViewWidget() {
   }, []);
 
   return (
-    <div className='w-[400px] h-80 p-1 mb-7'>
+    <div className='h-96 p-1 mb-7'>
       <div className='font-semibold pb-2'>Bitcoin Price Chart (USD)</div>
-      <div className='tradingview-widget-container h-72 w-[400px]' ref={container}></div>
+      <div className='tradingview-widget-container' ref={container}></div>
     </div>
   );
 }

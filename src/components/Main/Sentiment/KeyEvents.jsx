@@ -39,6 +39,21 @@ const KeyEvents = () => {
             </p>
           </div>
         </div>
+        <div className='bg-blue-50 p-4 rounded-md flex gap-2 min-w-[345px]'>
+          <div className='pt-2'>
+            <NotesSVG />
+          </div>
+          <div>
+            <p className='font-semibold leading-tight text-sm pb-2'>
+              Lorem ipsum dolor sit amet consectetur. Dui vel quis dignissim mattis enim{' '}
+            </p>
+            <p className='text-xs text-gray-600'>
+              Lorem ipsum dolor sit amet consectetur. Ac phasellus risus est faucibus metus quis.
+              Amet sapien quam viverra adipiscing condimentum. Ac consectetur et pretium in a
+              bibendum in. Sed vitae sit nisi viverra natoque lacinia libero enim.
+            </p>
+          </div>
+        </div>
       </div>
     </>
   );

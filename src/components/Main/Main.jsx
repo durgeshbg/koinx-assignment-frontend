@@ -10,8 +10,8 @@ import TrendingCoins from './TrendingCoins/TrendingCoins';
 
 const Main = () => {
   return (
-    <div className='bg-slate-100'>
-      <div className='flex flex-col'>
+    <div className='bg-slate-100 lg:flex'>
+      <div className='flex flex-col lg:w-8/12'>
         <BreadCrumbs items={['Cryptocurrencies', 'Bitcoin']} activeIndex={1} />
         <CurrentCoin />
         <Analytics />
