@@ -2,6 +2,7 @@ import Analytics from './Analytics/Analytics';
 import Sentiment from './Sentiment/Sentiment';
 import BreadCrumbs from './CurrentCoin/BreadCrumbs';
 import CurrentCoin from './CurrentCoin/CurrentCoin';
+import AboutBitCoin from './AboutBitCoin/AboutBitCoin';
 
 const Main = () => {
   return (
@@ -11,6 +12,7 @@ const Main = () => {
         <CurrentCoin />
         <Analytics />
         <Sentiment />
+        <AboutBitCoin />
       </main>
     </>
   );
