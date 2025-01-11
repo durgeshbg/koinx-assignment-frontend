@@ -4,7 +4,7 @@ import Fundamentals from './Fundamentals';
 
 const Analytics = () => {
   return (
-    <div className='h-full mt-5 mx-5 '>
+    <div className='h-full mt-5 mx-5 lg:ml-10'>
       <AnalyticsNav activeIndex={0} />
       <div className='flex flex-col bg-white rounded-md mx-auto p-7 w-full mt-5'>
         <Performance />

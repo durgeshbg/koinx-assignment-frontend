@@ -6,7 +6,7 @@ const TrendingCoins = () => {
   const data = useRecoilValue(trendingCoinsAtom);
 
   return (
-    <div className='flex flex-col bg-white rounded-sm p-7 mt-5 lg:mx-5 lg:rounded-md'>
+    <div className='flex flex-col bg-white rounded-sm p-7 mt-5 lg:mx-5 lg:rounded-md lg:mr-10'>
       <h3 className='font-semibold text-xl'>Trending Coins (24H)</h3>
       <ul>
         <TrendingItem

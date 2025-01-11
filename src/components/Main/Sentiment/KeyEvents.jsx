@@ -41,7 +41,7 @@ const KeyEvents = () => {
         <span className='text-black text-xl'>&larr;</span>
       </button>
 
-      <div ref={scrollContainerRef} className='overflow-x-scroll mt-3 w-full flex gap-3'>
+      <div ref={scrollContainerRef} className='overflow-x-scroll mt-3 w-full flex gap-3 px-5'>
         <KeyEvent
           SVG={<NotesSVG />}
           title={'Lorem ipsum dolor sit amet consectetur. Dui vel quis dignissim mattis enim'}

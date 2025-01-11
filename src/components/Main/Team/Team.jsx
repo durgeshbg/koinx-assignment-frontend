@@ -2,7 +2,7 @@ import TeamCard from './TeamCard';
 
 const Team = () => {
   return (
-    <div className='flex flex-col bg-white rounded-md rounded-b-none p-7 mx-5 mt-5'>
+    <div className='flex flex-col bg-white rounded-md rounded-b-none p-7 mx-5 mt-5 lg:ml-10'>
       <h3 className='text-2xl font-semibold'>Team</h3>
       <p className='my-3'>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto doloribus laudantium
