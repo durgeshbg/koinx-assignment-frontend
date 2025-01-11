@@ -1,6 +1,6 @@
 const BreadCrumbs = ({ items, activeIndex }) => {
   return (
-    <ul className='flex pt-6 px-5 gap-2'>
+    <ul className='flex pt-6 gap-2'>
       {items &&
         items.map((item, i) => (
           <li

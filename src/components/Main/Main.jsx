@@ -1,10 +1,10 @@
-import BreadCrumbs from './BreadCrumbs';
-import CurrentCoin from './CurrentCoin';
+import BreadCrumbs from './CurrentCoin/BreadCrumbs';
+import CurrentCoin from './CurrentCoin/CurrentCoin';
 
 const Main = () => {
   return (
     <>
-      <main className='bg-slate-100'>
+      <main className='bg-slate-100 flex flex-col px-5'>
         <BreadCrumbs items={['Cryptocurrencies', 'Bitcoin']} activeIndex={1} />
         <CurrentCoin />
       </main>
